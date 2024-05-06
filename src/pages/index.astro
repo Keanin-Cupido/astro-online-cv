@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Online CV</title>
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,14 +60,42 @@
 
 	/* Left Section */
 	.section__left {
-		width: 25%;
+		width: 20%;
 		height: 100vh;
 		background-color: #20202A;
+		display: flex;
+		flex-direction: column;
+	}
+	.profile {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75em;
+		text-align: center;
+		background-color: #24242E;
+		padding: 2em;
+	}
+	.profile--pic {
+		width: 76px;
+		height: 76px;
+		background: gray;
+		border-radius: 50%;
+	}
+	.profile--name {
+		font-size: 0.9rem;
+		font-weight: bold;
+	}
+	.profile--profession {
+		font-size: 0.8rem;
+		font-weight: normal;
+		opacity: 0.7;
 	}
 
 	/* Middle Section */
 	.section__middle {
-		width: 60%;
+		width: 65%;
 	}
 
 	/* Right Section */
