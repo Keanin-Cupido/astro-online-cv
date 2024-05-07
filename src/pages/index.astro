@@ -1,5 +1,7 @@
 ---
-
+import LeftPanel from "../components/LeftPanel.astro";
+import MiddlePanel from '../components/MiddlePanel.astro';
+import RightPanel from '../components/RightPanel.astro';
 ---
 
 <html lang="en">
@@ -15,31 +17,16 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<section class="section__left">
-			<div class="profile">
-				<div class="profile--pic">
-					<img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile--pic">
-					<div class="status__indicator"></div>
-				</div>
-				<div class="profile--name">Artur Carter</div>
-				<div class="profile--profession">
-					<p>Front-end Developer</p>
-					<p>UI/UX Designer</p>
-				</div>
-			</div>
-			<div class="info"></div>
-			<div class="socials"></div>
-		</section>
-		<section class="section__middle">
-		</section>
-		<section class="section__right">
-		</section>
+		<LeftPanel />
+		<MiddlePanel />
+		<RightPanel />
 	</body>
 </html>
 
 <style>
 	*, *::before, *::after {
 		box-sizing: border-box;
+		width: 100%;
 		margin: 0;
 		padding: 0;
 		transition: all 0.3s ease;
@@ -57,70 +44,5 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-start;
-	}
-
-	/* Left Section */
-	.section__left {
-		width: 20%;
-		height: 100vh;
-		background-color: #20202A;
-		display: flex;
-		flex-direction: column;
-	}
-	.profile {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 0.75em;
-		text-align: center;
-		background-color: #24242E;
-		padding: 2em;
-	}
-	.profile--pic {
-		width: 80px;
-		height: 80px;
-		background: gray;
-		border-radius: 50%;
-		position: relative;
-	}
-	.profile--pic > img {
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		object-fit: cover;
-		object-position: top;
-	}
-	.status__indicator {
-		width: 12px;
-		height: 12px;
-		outline: 2px solid hsla(43, 88%, 61%, 0.3);
-		border-radius: 50%;
-		background: #F3C043;
-		position: absolute;
-		right: 8px;
-		bottom: 3px;
-	}
-	.profile--name {
-		font-size: 0.9rem;
-		font-weight: bold;
-	}
-	.profile--profession {
-		font-size: 0.8rem;
-		font-weight: normal;
-		opacity: 0.7;
-	}
-
-	/* Middle Section */
-	.section__middle {
-		width: 65%;
-	}
-
-	/* Right Section */
-	.section__right {
-		width: 15%;
-		height: 100vh;
-		background-color: #20202A;
 	}
 </style>
