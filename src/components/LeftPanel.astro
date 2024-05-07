@@ -1,8 +1,9 @@
 ---
-
+import InfoBlock from "./InfoBlock.astro"
 ---
 
 <section class="section__left">
+	<!-- === PROFILE === -->
     <div class="profile">
         <div class="profile--pic">
             <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile--pic">
@@ -14,7 +15,17 @@
             <p>UI/UX Designer</p>
         </div>
     </div>
-    <div class="info"></div>
+
+	<!-- === INFO === -->
+    <div class="info">
+		<InfoBlock divider={true}>
+			<p class="info--residence"><span>Residence:</span> Canada</p>
+			<p class="info--city"><span>City:</span> Toronto</p>
+			<p class="info--age"><span>Age:</span> 26</p>
+		</InfoBlock>
+	</div>
+
+	<!-- === SOCIALS === -->
     <div class="socials"></div>
 </section>
 
@@ -39,7 +50,7 @@
 		gap: 0.75em;
 		text-align: center;
 		background-color: #24242E;
-        padding: 2em;
+        padding: 1em 2em;
 	}
 	.profile--pic {
 		width: 80px;
