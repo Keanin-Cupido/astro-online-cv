@@ -19,9 +19,9 @@ import InfoBlock from "./InfoBlock.astro"
 	<!-- === INFO === -->
     <div class="info">
 		<InfoBlock divider={true}>
-			<p class="info--residence"><span>Residence:</span> Canada</p>
-			<p class="info--city"><span>City:</span> Toronto</p>
-			<p class="info--age"><span>Age:</span> 26</p>
+			<p class="info--residence"><span class="info--heading">Residence:</span> <span class="info--grey">Canada</span></p>
+			<p class="info--city"><span class="info--heading">City:</span> <span class="info--grey">Toronto</span></p>
+			<p class="info--age"><span class="info--heading">Age:</span> <span class="info--grey">26</span></p>
 		</InfoBlock>
 	</div>
 
@@ -87,8 +87,24 @@ import InfoBlock from "./InfoBlock.astro"
 	}
 
     /* ============== INFO ================ */
-
+	.info {
+		width: 100%;
+	}
+	.info--residence, .info--city, .info--age {
+		font-size: 0.9rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.info--heading {
+		font-weight: bold;
+	}
+	.info--grey {
+		opacity: 0.66;
+	}
 
     /* ============== SOCIALS ================ */
-
+	.socials {
+		width: 100%;
+	}
 </style>
